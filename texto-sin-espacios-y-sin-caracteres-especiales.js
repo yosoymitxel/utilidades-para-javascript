@@ -1,9 +1,9 @@
 function validarCaracteres(texto){
     //Aquí añades las letras que no quieres que se usen
-    let vocalesNoPermitidas    = ['á','é','í','ó','ú'];
+    let vocalesNoPermitidas    = ['á','é','í','ó','ú','ñ'];
     
     //Aquí añades las letras que quieres que se usen
-    let vocalesPermitidas      = ['a','e','i','o','u'];
+    let vocalesPermitidas      = ['a','e','i','o','u','ni'];
     
     //Aquí añades los caracteres que no quieres que se usen
     let caracteresNoPermitidos = ['?','\"','\''];
