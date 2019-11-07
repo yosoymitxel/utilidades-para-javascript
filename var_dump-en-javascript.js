@@ -23,5 +23,8 @@ function var_dump(dato) {
             }
             echo(tipoDato+'('+valorDato.length+') "'+valorDato+'"');
             break;
+        case 'boolean':
+            echo(tipoDato+' "'+valorDato+'"');
+            break;
     }
 }
