@@ -1,5 +1,8 @@
+function echo(texto){
+    console.log(texto);
+}
+
 function var_dump(dato) {
-    echo(typeof dato);
     let tipoDato  = typeof dato;
     let valorDato = dato;
     switch (tipoDato) {
@@ -20,6 +23,5 @@ function var_dump(dato) {
             }
             echo(tipoDato+'('+valorDato.length+') "'+valorDato+'"');
             break;
-
     }
 }
