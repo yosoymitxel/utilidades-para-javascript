@@ -3,28 +3,35 @@ function echo(texto){
 }
 
 function var_dump(dato) {
-    let tipoDato  = typeof dato;
+    let tipoDato = typeof dato;
     let valorDato = dato;
     switch (tipoDato) {
         case 'number':
-            if(valorDato%1==0){
+            if (valorDato % 1 == 0) {
                 tipoDato = 'int';
-            }else{
+            } else {
                 tipoDato = 'float';
             }
-            echo(tipoDato+'('+valorDato+')');
+            echo(tipoDato + '(' + valorDato + ')');
             break;
         case 'string':
-            echo(tipoDato+'('+valorDato.length+') "'+valorDato+'"');
+            echo(tipoDato + '(' + valorDato.length + ') "' + valorDato + '"');
             break;
         case 'object':
-            if(Array.isArray(valorDato)){
+            if (Array.isArray(valorDato)) {
                 tipoDato = 'array';
+                echo(tipoDato + '(' + valorDato.length + ') "' + valorDato + '"');
+            }else if(valorDato == null){
+                echo('NULL');
+            }else{
+                echo('Objeto no reconocido.')
             }
-            echo(tipoDato+'('+valorDato.length+') "'+valorDato+'"');
             break;
         case 'boolean':
-            echo(tipoDato+' "'+valorDato+'"');
+            echo(tipoDato + ' "' + valorDato + '"');
+            break;
+        case 'undefined':
+            echo('La variable no está definida. (undefined)');
             break;
     }
 }
