@@ -25,6 +25,7 @@ echo('El numero es: ('+numero+')');
 
 //BONUS, mostrar con unidades de mil ejemplo 10000 = 10.000
 function number_format(user_input){
+        user_input = user_input.toString();
         var filtered_number = user_input.replace(/[^0-9]/gi, '');
         var length = filtered_number.length;
         var breakpoint = 1;
