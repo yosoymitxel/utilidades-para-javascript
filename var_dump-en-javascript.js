@@ -7,7 +7,7 @@ function var_dump(dato) {
     let valorDato = dato;
     switch (tipoDato) {
         case 'number':
-            if (valorDato % 1 == 0) {
+            if (Number.isSafeInteger(valorDato)) {
                 tipoDato = 'int';
             } else {
                 tipoDato = 'float';
@@ -20,11 +20,16 @@ function var_dump(dato) {
         case 'object':
             if (Array.isArray(valorDato)) {
                 tipoDato = 'array';
-                echo(tipoDato + '(' + valorDato.length + ') "' + valorDato + '"');
+                echo(`${tipoDato} (${valorDato.length}) "${valorDato}"`);
             }else if(valorDato == null){
                 echo('NULL');
+            }else if(dev_existe_objeto_dom($(dato).attr('id'))){
+                dev_var_dom_dump($(dato).attr('id'));
+            }else if(dato !== undefined && dato !== null && dato.constructor == Object){
+                echo('Objeto de tipo JSON');
+                echo(dato);
             }else{
-                echo('Objeto no reconocido.')
+                echo('Objeto no reconocido.');
             }
             break;
         case 'boolean':
