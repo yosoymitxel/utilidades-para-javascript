@@ -1,4 +1,4 @@
-# utilidades-para-javascript
+# Utilidades para JavaScript
 
 Conjunto de funciones útiles para JavaScript
 
