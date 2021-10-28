@@ -4,7 +4,7 @@ Conjunto de funciones útiles para JavaScript
 
 ## Funciones agregadas
 
-Añadir jquery con js
+* Añadir jquery con js
 * Caracteres permitidos en input html
 * Conseguir numeros de un string
 * Contador texto para pruebas
