@@ -1,7 +1,7 @@
 #Usa jquery y solo debes mandarle el id de la tabla junto con una tabla que tiene su respectivo theader y tbody 
 
 function exportHTMLTableXML(idTable) {
-    let nombre = nombreArchivo(idTable)
+    let nombre = idTable+'-'+((new Date).toLocaleDateString()).replaceAll('/','-')
     let titulos = []
     $('#table-duplicados thead th').each(function(i,o) {
         titulos.push($(o).text())
