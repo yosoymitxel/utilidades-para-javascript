@@ -21,3 +21,6 @@ Conjunto de funciones útiles para JavaScript
 * Texto sin espacios y sin caracteres especiales
 * Var dom dump
 * Var dump en javascript
+* Exportar tabla html a xml
+* Exportar tabla html a xls
+* Exportar tabla html a csv
