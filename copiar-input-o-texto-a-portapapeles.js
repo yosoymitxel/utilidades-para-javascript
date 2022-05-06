@@ -35,6 +35,7 @@ function copiarTextoConSaltoDeLinea(objeto) {
     $(objeto).text(($(objeto).text().replace("/<br>", "\n")));
     $(objeto).val(($(objeto).val().replace("<br>", "\n")));
     $(objeto).val(($(objeto).val().replace("/<br>", "\n")));
+   
     //Aquí establecemos qué datos usaremos, este esta pensado para un onclick cambia el this por '#id-del-objeto' para hacerlo dinámico
     let id     = $(objeto).attr('id');
     let texto  = $(objeto).text();
