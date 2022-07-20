@@ -1,4 +1,4 @@
-function copiar_nombres_posts_medium(){
+function medium_copiar_nombres_posts(){
   //Añadimos jQuery
   var script  = document.createElement('script');
   script.src  = 'https://code.jquery.com/jquery-3.4.1.min.js';
@@ -15,5 +15,5 @@ function copiar_nombres_posts_medium(){
   console.log(titulos)
 }
 
-copiar_nombres_posts_medium();
+medium_copiar_nombres_posts();
 
