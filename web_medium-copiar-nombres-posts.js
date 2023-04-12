@@ -8,7 +8,7 @@ function medium_copiar_nombres_posts(){
   //Copiamos 
   var titulos = ''
   
-  $('h2.bv.he.rq.rr.rs.rt.ru.rv.rw.rx.ry.rz.sa.sb.sc.sd.se.sf.sg.sh.si.sj.sk.sl.sm.sn.so.ct.oz.pa.pc.pd.by').each(function(a,o){
+  $('h2.ak.gk.kw.kx.ky.kz.la.lb.lc.ld.le.lf.lg.lh.li.lj.lk.ll.lm.ln.lo.lp.lq.lr.ls.lt.lu.fz.gb.gc.ge.gg.bo').each(function(a,o){
       titulos += $(o).text() + '\n'
   })
   
