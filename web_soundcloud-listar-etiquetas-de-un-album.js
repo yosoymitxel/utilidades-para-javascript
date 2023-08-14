@@ -6,7 +6,7 @@ function listarEtiquetasDeUnAlbum(){
 
   var etiquetas = ''
   $('.sc-truncate.sc-tagContent').each(function(a,e){
-      etiquetas += ($(e).text())+'\n'
+      etiquetas += '#"'+($(e).text())+'"\n'
   })
   console.log(etiquetas)
 }
