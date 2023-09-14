@@ -1,0 +1,21 @@
+let queries = [
+  `update "CompraComprobanteProveedor" set "IdEstado" = 1 WHERE "IdCompraComprobanteProveedor" in (select "IdCompraComprobanteProveedor" from "CompraComprobanteProveedor" ccp WHERE "IdCompraOrden" = 43881)`,
+  `DELETE FROM "CompraComprobanteProveedorDetalle" ccpd WHERE "IdCompraComprobanteProveedor" in (select "IdCompraComprobanteProveedor" from "CompraComprobanteProveedor" ccp WHERE "IdCompraOrden" = 43881)`,
+];
+var queriese = '';
+for (let i = 0; i < queries.length; i++) {
+  let query = queries[i];
+  let selectQuery = '';
+
+  if (query.includes('UPDATE')) {
+    // Obtener los nombres de las columnas
+    let columns = query.match(/SET\s+(.+)\s+WHERE/i)[1];
+    selectQuery = `SELECT ${columns} FROM ${query.match(/UPDATE\s+(\S+)/i)[1]} WHERE ${query.match(/WHERE\s+(.+)/i)[1]}`;
+  } else if (query.includes('DELETE')) {
+    selectQuery = `SELECT * FROM ${query.match(/FROM\s+(\S+)/i)[1]} WHERE ${query.match(/WHERE\s+(.+)/i)[1]}`;
+  }
+queriese += selectQuery+';\n'
+  
+}
+
+console.log((queriese));
